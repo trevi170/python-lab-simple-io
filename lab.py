@@ -1,24 +1,19 @@
-"""
-Lab 2.6.1.9: Simple Input and Output
-Objective: Learn input/output operations and basic arithmetic in Python
-"""
-
 # Input a float value for variable a here
-a =
+a = 10.5
 
 # Input a float value for variable b here
-b =
+b = 3.0
 
 # Output the result of addition here
-result_add =
+result_add = a + b
 
 # Output the result of subtraction here
-result_sub =
+result_sub = a - b
 
 # Output the result of multiplication here
-result_mul =
+result_mul = a * b
 
 # Output the result of division here
-result_div =
+result_div = a / b
 
 print("That's all, folks!")
