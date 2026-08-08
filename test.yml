@@ -1,0 +1,28 @@
+name: Auto-grade Lab
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Run lab tests
+      run: python test_lab.py
+
+    - name: Run pytest if available
+      run: |
+        pip install pytest
+        python -m pytest test_lab.py -v
+      continue-on-error: true
